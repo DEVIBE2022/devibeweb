@@ -1,10 +1,16 @@
 import React from "react";
 import Logo from "../../images/logo.svg";
 import { Link } from "gatsby";
+import ScrollProgress from "../ScrollProgress";
 
 const Navbar = () => {
+  const completion = ScrollProgress();
   return (
-    <header className="w-full fixed bg-light-yellow z-10">
+    <header className="w-full bg-light-yellow z-10">
+      <span
+        style={{ transform: `translateX(${completion - 100}%)` }}
+        className="fixed bg-orange h-1 w-full top-0 z-20"
+      />
       <nav className="px-[6.25rem] py-5 w-full flex flex-row justify-between items-center">
         <Link to="/">
           <img src={Logo} alt="logo" className="h-11 w-auto" />

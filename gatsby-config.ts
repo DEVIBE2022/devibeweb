@@ -19,6 +19,7 @@ const config: GatsbyConfig = {
         icon: "src/images/icon.png",
       },
     },
+    "gatsby-plugin-sass",
     "gatsby-plugin-mdx",
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
