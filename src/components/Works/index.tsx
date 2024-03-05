@@ -41,7 +41,7 @@ export default function Works() {
   return (
     <section
       className="bg-black rounded-bl-[3.75rem] py-40 flex flex-row gap-[6.75rem] z-1"
-      id="works"
+      id="work"
     >
       <div className="pl-[6.25rem] flex-auto">
         <h2 className="font-heavy text-white">OUR WORKS</h2>
@@ -57,7 +57,7 @@ export default function Works() {
           </p>
           <Link
             to="#works"
-            className="relative group mt-10 inline-flex gap-x-[0.38rem] items-center border-2 hover:z-10 border-white rounded bg-transparent px-[0.38rem] py-1 font-regular text-xl text-white transition-colors before:absolute before:left-0 before:top-0 before:-z-10 before:h-full before:w-full before:origin-top-left before:scale-x-0 before:bg-white before:transition-transform before:duration-300 before:content-[''] hover:text-black before:hover:scale-x-100"
+            className="link relative group mt-10 inline-flex gap-x-[0.38rem] items-center border-2 hover:z-10 border-white rounded bg-transparent px-[0.38rem] py-1 font-regular text-xl text-white transition-colors before:absolute before:left-0 before:top-0 before:-z-10 before:h-full before:w-full before:origin-top-left before:scale-x-0 before:bg-white before:transition-transform before:duration-300 before:content-[''] hover:text-black before:hover:scale-x-100"
           >
             <p>View all works</p>
             <IoArrowForwardOutline className="rotate-45 group-hover:rotate-0 transition-all ease-in-out" />

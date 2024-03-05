@@ -26,7 +26,7 @@ const Hero = () => {
         </p>
         <Link
           to="https://calendly.com/"
-          className="relative group mt-7 inline-flex gap-x-[0.38rem] items-center border-2 hover:z-10 border-black rounded bg-transparent px-[0.38rem] py-1 font-regular text-xl text-black transition-colors before:absolute before:left-0 before:top-0 before:-z-10 before:h-full before:w-full before:origin-top-left before:scale-x-0 before:bg-black before:transition-transform before:duration-300 before:content-[''] hover:text-white before:hover:scale-x-100"
+          className="link relative group mt-7 inline-flex gap-x-[0.38rem] items-center border-2 hover:z-10 border-black rounded bg-transparent px-[0.38rem] py-1 font-regular text-xl text-black transition-colors before:absolute before:left-0 before:top-0 before:-z-10 before:h-full before:w-full before:origin-top-left before:scale-x-0 before:bg-black before:transition-transform before:duration-300 before:content-[''] hover:text-white before:hover:scale-x-100"
         >
           <p>Request for a meeting</p>
           <IoArrowForwardOutline className="rotate-45 group-hover:rotate-0 transition-all ease-in-out" />
