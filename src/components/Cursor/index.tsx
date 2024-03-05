@@ -1,6 +1,8 @@
-import React, { MutableRefObject, useEffect, useRef } from "react";
+import React, { MutableRefObject, useRef } from "react";
 import { gsap, Linear } from "gsap";
 import { IDesktop, isSmallScreen } from "../../pages/index";
+import { useGSAP } from "@gsap/react";
+
 
 const CURSOR_STYLES = {
   CURSOR: "fixed hidden bg-white w-4 h-4 select-none pointer-events-none z-50",
@@ -62,7 +64,7 @@ const Cursor = ({ isDesktop }: IDesktop) => {
     });
   };
 
-  useEffect(() => {
+  useGSAP(() => {
     if (isDesktop && !isSmallScreen()) {
       initCursorAnimation();
     }
