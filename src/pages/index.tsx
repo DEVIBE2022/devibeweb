@@ -7,6 +7,7 @@ import Testimonials from "../components/Testimonials";
 import Blogs from "../components/Blogs";
 import Cursor from "../components/Cursor";
 import { useState } from "react";
+import Team from "../components/Team";
 
 const DEBOUNCE_TIME = 100;
 
@@ -50,13 +51,14 @@ const IndexPage: React.FC<PageProps> = () => {
   );
   return (
     <>
-    <Cursor isDesktop={isDesktop}/>
+      <Cursor isDesktop={isDesktop} />
       <Header />
       <main>
         <Hero />
         <Works />
         <Testimonials />
         <Blogs />
+        <Team />
       </main>
     </>
   );
