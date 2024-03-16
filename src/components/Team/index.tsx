@@ -4,6 +4,7 @@ import { FiLinkedin, FiDribbble, FiTwitter } from "react-icons/fi";
 import person1 from "../../images/p1.webp";
 import person2 from "../../images/p2.webp";
 import person3 from "../../images/p3.webp";
+import person4 from "../../images/p4.png";
 
 interface ContainerProps {
   image: string;
@@ -79,8 +80,17 @@ export default function Team() {
           twitter="https://twitter.com/DebidattaS10"
           dribbble="https://dribbble.com/"
           name="Debidatta Suryaprakash"
-          title="Founder"
+          title="Co-Founder"
           description="Building products that creates impact."
+        />
+        <Container
+          image={person4}
+          linkedIn="https://www.linkedin.com/in/pritipadmamishra/"
+          twitter="https://twitter.com/PritipadmaMish1"
+          dribbble="https://dribbble.com/"
+          name="Pritipadma Mishra"
+          title="Co-Founder"
+          description="Considering all possible solutions."
         />
         <Container
           image={person2}
