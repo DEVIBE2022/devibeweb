@@ -6,7 +6,7 @@ import { Link } from "gatsby";
 
 const Hero = () => {
   return (
-    <section className="bg-light-yellow px-[6.25rem] pt-72 pb-4 flex flex-row align-top justify-between gap-10">
+    <section className="bg-white px-[6.25rem] pt-72 pb-4 flex flex-row align-top justify-between gap-10">
       <div>
         <div className="relative">
           <img
