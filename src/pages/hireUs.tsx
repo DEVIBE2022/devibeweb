@@ -2,6 +2,7 @@ import { PageProps } from "gatsby";
 import React, { useRef, useState, MutableRefObject } from "react";
 import Header from "../components/Header";
 import { IoArrowForwardOutline } from "react-icons/io5";
+import Footer from "../components/Footer";
 
 const HireUsPage: React.FC<PageProps> = () => {
   const formRef: MutableRefObject<HTMLFormElement | null> =
@@ -208,6 +209,7 @@ const HireUsPage: React.FC<PageProps> = () => {
           </form>
         </div>
       </div>
+      <Footer/>
     </>
   );
 };

@@ -2,6 +2,7 @@ import { graphql, Link, PageProps } from "gatsby";
 import React from "react";
 import Header from "../components/Header";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
+import Footer from "../components/Footer";
 
 const BlogPage: React.FC<PageProps<Queries.BlogPageQuery>> = ({ data }) => {
   return (
@@ -37,6 +38,7 @@ const BlogPage: React.FC<PageProps<Queries.BlogPageQuery>> = ({ data }) => {
           </li>
         ))}
       </ul>
+      <Footer/>
     </>
   );
 };

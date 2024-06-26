@@ -4,6 +4,7 @@ import React from "react";
 import Header from "../components/Header";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import { components, MainContent } from "../components/mdx-components"; 
+import Footer from "../components/Footer";
 
 
 const BlogPostTemplate: React.FC<PageProps<Queries.BlogPostQuery>> = ({
@@ -30,6 +31,7 @@ const BlogPostTemplate: React.FC<PageProps<Queries.BlogPostQuery>> = ({
         </div>
         <MDXProvider components={components}>{children}</MDXProvider>
       </MainContent>
+      <Footer/>
     </>
   );
 };

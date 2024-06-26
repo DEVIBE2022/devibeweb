@@ -8,6 +8,7 @@ import Blogs from "../components/Blogs";
 import Cursor from "../components/Cursor";
 import { useState } from "react";
 import Team from "../components/Team";
+import Footer from "../components/Footer";
 
 const DEBOUNCE_TIME = 100;
 
@@ -60,6 +61,7 @@ const IndexPage: React.FC<PageProps> = () => {
         <Blogs />
         <Team />
       </main>
+      <Footer/>
     </>
   );
 };
