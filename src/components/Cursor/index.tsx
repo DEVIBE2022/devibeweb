@@ -1,15 +1,14 @@
-import React, { MutableRefObject, useRef } from "react";
+import React, { MutableRefObject, useRef, useEffect } from "react";
 import { gsap, Linear } from "gsap";
-import { IDesktop, isSmallScreen } from "../../pages/index";
 import { useGSAP } from "@gsap/react";
-
+import { IDesktop, isSmallScreen } from "../../pages/index";
 
 const CURSOR_STYLES = {
   CURSOR: "fixed hidden bg-white w-4 h-4 select-none pointer-events-none z-50",
   FOLLOWER: "fixed hidden h-8 w-8 select-none pointer-events-none z-50",
 };
 
-const Cursor = ({ isDesktop }: IDesktop) => {
+const Cursor: React.FC<IDesktop> = ({ isDesktop }) => {
   const cursor: MutableRefObject<HTMLDivElement | null> =
     useRef<HTMLDivElement | null>(null);
   const follower: MutableRefObject<HTMLDivElement | null> =
@@ -69,6 +68,16 @@ const Cursor = ({ isDesktop }: IDesktop) => {
       initCursorAnimation();
     }
   }, [cursor, follower, isDesktop]);
+
+  useEffect(() => {
+    return () => {
+      document.removeEventListener("mousemove", moveCircle);
+      document.querySelectorAll(".link").forEach((el) => {
+        el.removeEventListener("mouseenter", onHover);
+        el.removeEventListener("mouseleave", onUnhover);
+      });
+    };
+  }, []);
 
   return (
     <>

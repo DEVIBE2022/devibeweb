@@ -1,8 +1,9 @@
-import { PageProps } from "gatsby";
+import { HeadFC, PageProps } from "gatsby";
 import React, { useRef, useState, MutableRefObject } from "react";
 import Header from "../components/Header";
 import { IoArrowForwardOutline } from "react-icons/io5";
 import Footer from "../components/Footer";
+import { CustomHead } from "../components/CustomHead";
 
 const HireUsPage: React.FC<PageProps> = () => {
   const formRef: MutableRefObject<HTMLFormElement | null> =
@@ -78,7 +79,7 @@ const HireUsPage: React.FC<PageProps> = () => {
   return (
     <>
       <Header />
-      <div className="flex flex-col items-center justify-center w-full mt-20 max-xl:px-4">
+      <div className="flex flex-col items-center justify-center w-full my-20 max-xl:px-4">
         <div className="flex flex-col items-center max-w-5xl">
           <h1 className="font-serif text-5xl text-center">Project Inquiry</h1>
           <p className="font-regular text-2xl mt-10 text-center">
@@ -214,3 +215,10 @@ const HireUsPage: React.FC<PageProps> = () => {
   );
 };
 export default HireUsPage;
+
+export const Head: HeadFC = () => (
+  <CustomHead
+    title="Hire Us | Devibe"
+    description="Devibe is a full-service digital agency, specializing in design, development and brand strategy to find customers and drive revenue."
+  />
+);

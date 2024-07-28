@@ -1,12 +1,11 @@
 import React from "react";
 import { Link } from "gatsby";
-import Logo from "../../images/FooterLogo.svg";
-import { FiDribbble, FiFacebook, FiInstagram, FiTwitter } from "react-icons/fi";
-import { IoLogoPinterest } from "react-icons/io5";
-
+import Logo from "../../images/FooterLogoImage.svg";
+import { FiDribbble, FiFacebook, FiInstagram, FiLinkedin, FiTwitter } from "react-icons/fi";
+import { FaBehance } from "react-icons/fa";
 const Footer = () => {
   return (
-    <div className="flex flex-col bg-black mt-20">
+    <div className="flex flex-col bg-black">
       <div className="mx-auto max-w-7xl flex-grow py-8 w-full px-4 xl:px-0">
         <div className="flex flex-col items-start justify-between gap-10 lg:flex-row">
           <div className="flex-col">
@@ -26,13 +25,13 @@ const Footer = () => {
                 <FiTwitter color="#C0C0C0" size="20" />
               </Link>
               <Link to="/">
-                <FiFacebook color="#C0C0C0" size="20" />
+                <FaBehance color="#C0C0C0" size="20" />
               </Link>
               <Link to="/">
                 <FiInstagram color="#C0C0C0" size="20" />
               </Link>
               <Link to="/">
-                <IoLogoPinterest color="#C0C0C0" size="20" />
+                <FiLinkedin color="#C0C0C0" size="20" />
               </Link>
             </div>
             <Link

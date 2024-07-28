@@ -15,7 +15,7 @@ const Header = () => {
   const genericHamburgerLine = `h-1 w-8 my-1 rounded-full bg-black transition ease transform duration-300`;
   const completion = ScrollProgress();
   return (
-    <header className="w-full bg-white backdrop-blur-md bg-opacity-25 sticky top-0 z-10">
+    <header className="w-full bg-white backdrop-blur-md bg-opacity-25 fixed top-0 z-50">
       <span
         style={{ transform: `translateX(${completion - 100}%)` }}
         className="fixed bg-orange h-1 w-full top-0 z-50"
@@ -23,7 +23,7 @@ const Header = () => {
       {title && (
         <div className="lg:px-[6.25rem] px-8 py-5 w-full flex flex-row justify-between items-center">
           <Link to="/" className="z-50">
-            <img src={Logo} alt="logo" className="h-11 w-auto" />
+            <img src={Logo} alt="logo" className="h-6" />
           </Link>
           <nav className="lg:flex lg:flex-row lg:gap-x-14 lg:items-center hidden">
             <ul className="flex flex-row gap-x-10">

@@ -3,7 +3,9 @@ import type { GatsbyConfig } from "gatsby";
 const config: GatsbyConfig = {
   siteMetadata: {
     title: `Devibe`,
-    siteUrl: `https://www.yourdomain.tld`,
+    siteUrl: `https://www.devibe.agency`,
+    description:
+      "Try a full-service digital agency, specializing in design, development and brand strategy to find customers and drive revenue.",
     navigation: [
       {
         name: "Team",
@@ -31,6 +33,7 @@ const config: GatsbyConfig = {
     "gatsby-plugin-image",
     "gatsby-plugin-sitemap",
     "gatsby-plugin-postcss",
+    "gatsby-plugin-sitemap",
     {
       resolve: "gatsby-plugin-manifest",
       options: {
