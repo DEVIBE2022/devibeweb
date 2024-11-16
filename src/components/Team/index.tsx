@@ -1,10 +1,10 @@
 import React from "react";
 import { Link } from "gatsby";
 import { FiLinkedin, FiDribbble, FiTwitter } from "react-icons/fi";
-import person1 from "../../images/p1.webp";
-import person2 from "../../images/p2.webp";
-import person3 from "../../images/p3.webp";
-import person4 from "../../images/p4.png";
+import person1 from "../../images/per1.svg";
+import person2 from "../../images/per3.svg";
+import person3 from "../../images/per4.svg";
+import person4 from "../../images/per2.svg";
 
 interface ContainerProps {
   image: string;
@@ -27,11 +27,11 @@ const Container: React.FC<ContainerProps> = ({
 }) => {
   return (
     <div className="w-full h-full aspect-[2/3] p-0 m-0 flex flex-col group transition-all delay-150">
-      <div className="h-2/3 w-full overflow-hidden group-hover:rounded-t-3xl">
+      <div className="h-2/3 w-full overflow-hidden group-hover:rounded-t-3xl  bg-orange/20">
         <img
           src={image}
           alt="teammate image"
-          className="w-full h-full object-cover"
+          className="w-full h-full object-contain scale-95"
         />
       </div>
       <div className="flex flex-col items-start bg-white p-4">
