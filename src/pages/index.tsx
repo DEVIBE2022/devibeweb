@@ -6,7 +6,12 @@ import Works from "../components/Works";
 import Testimonials from "../components/Testimonials";
 import Blogs from "../components/Blogs";
 import Cursor from "../components/Cursor";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import Team from "../components/Team";
+import Footer from "../components/Footer";
+import { CustomHead } from "../components/CustomHead";
+import homeImage from "../images/social.jpg";
+import Loading from "../components/Loading";
 
 const DEBOUNCE_TIME = 100;
 
@@ -20,6 +25,8 @@ export interface IDesktop {
 
 const IndexPage: React.FC<PageProps> = () => {
   const [isDesktop, setisDesktop] = useState(true);
+  const [isLoading, setIsLoading] = useState(true);
+  const [isAnimationComplete, setIsAnimationComplete] = useState(false);
   let timer: NodeJS.Timeout | null = null;
 
   const debouncedDimensionCalculator = () => {
@@ -37,31 +44,51 @@ const IndexPage: React.FC<PageProps> = () => {
     }, DEBOUNCE_TIME);
   };
 
-  React.useEffect(() => {
+  useEffect(() => {
     debouncedDimensionCalculator();
-
     window.addEventListener("resize", debouncedDimensionCalculator);
     return () =>
       window.removeEventListener("resize", debouncedDimensionCalculator);
   }, [timer]);
 
-  const renderBackdrop = (): React.ReactNode => (
-    <div className="fixed top-0 left-0 h-screen w-screen bg-gray-900 -z-1"></div>
-  );
+  useEffect(() => {
+    const timeout = setTimeout(() => setIsLoading(false), 3000); // Adjust the timeout duration as needed
+    return () => clearTimeout(timeout);
+  }, []);
+
+  const handleAnimationComplete = () => {
+    setIsAnimationComplete(true);
+  };
+
   return (
     <>
-    <Cursor isDesktop={isDesktop}/>
-      <Header />
-      <main>
-        <Hero />
-        <Works />
-        <Testimonials />
-        <Blogs />
-      </main>
+      {isLoading && !isAnimationComplete && (
+        <Loading onComplete={handleAnimationComplete} />
+      )}
+      {(!isLoading || isAnimationComplete) && (
+        <>
+          <Cursor isDesktop={isDesktop} />
+          <Header />
+          <main>
+            <Hero />
+            <Works />
+            <Testimonials />
+            <Blogs />
+            <Team />
+          </main>
+          <Footer />
+        </>
+      )}
     </>
   );
 };
 
 export default IndexPage;
 
-export const Head: HeadFC = () => <title>Home Page</title>;
+export const Head: HeadFC = () => (
+  <CustomHead
+    title="Devibe | Designing Tomorrow Your Ideas, Our Expertise"
+    description="Devibe is a full-service digital agency, specializing in design, development and brand strategy to find customers and drive revenue."
+    image={homeImage}
+  />
+);

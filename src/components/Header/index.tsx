@@ -15,7 +15,7 @@ const Header = () => {
   const genericHamburgerLine = `h-1 w-8 my-1 rounded-full bg-black transition ease transform duration-300`;
   const completion = ScrollProgress();
   return (
-    <header className="w-full bg-light-yellow z-10">
+    <header className="w-full bg-white backdrop-blur-md bg-opacity-25 fixed top-0 z-50">
       <span
         style={{ transform: `translateX(${completion - 100}%)` }}
         className="fixed bg-orange h-1 w-full top-0 z-50"
@@ -23,7 +23,7 @@ const Header = () => {
       {title && (
         <div className="lg:px-[6.25rem] px-8 py-5 w-full flex flex-row justify-between items-center">
           <Link to="/" className="z-50">
-            <img src={Logo} alt="logo" className="h-11 w-auto" />
+            <img src={Logo} alt="logo" className="h-6" />
           </Link>
           <nav className="lg:flex lg:flex-row lg:gap-x-14 lg:items-center hidden">
             <ul className="flex flex-row gap-x-10">
@@ -48,7 +48,7 @@ const Header = () => {
             </ul>
 
             <Link
-              to="mailto:tech.devibe@gmail.com"
+              to="/hireUs"
               className="link relative border-2 hover:z-10 border-black rounded bg-transparent px-[0.38rem] py-1 font-regular text-xl text-black transition-colors before:absolute before:left-0 before:top-0 before:-z-10 before:h-full before:w-full before:origin-top-left before:scale-x-0 before:bg-black before:transition-transform before:duration-300 before:content-[''] hover:text-white before:hover:scale-x-100"
             >
               Hire Us
@@ -57,7 +57,7 @@ const Header = () => {
           <nav
             className={
               menuOpen
-                ? `lg:hidden h-screen w-screen absolute top-0 left-0 z-20 bg-light-yellow`
+                ? `lg:hidden h-screen w-screen absolute top-0 left-0 z-20 bg-white backdrop-blur-md bg-opacity-95`
                 : `hidden`
             }
           >
@@ -65,7 +65,13 @@ const Header = () => {
               className="flex flex-column gap-y-20 items-center h-full w-full justify-center"
               style={{ flexDirection: "column" }}
             >
-              <ul  style={{ gap: "2rem", display: "flex", flexDirection: "column" }}>
+              <ul
+                style={{
+                  gap: "2rem",
+                  display: "flex",
+                  flexDirection: "column",
+                }}
+              >
                 {navigation?.map(
                   (nav) =>
                     nav?.path && (
@@ -81,7 +87,7 @@ const Header = () => {
                 )}
               </ul>
               <Link
-                to="mailto:tech.devibe@gmail.com"
+                to="/hireUs"
                 className="border-2 hover:z-10 border-black rounded bg-transparent px-[0.38rem] py-1 font-regular text-3xl text-black transition-colors before:absolute before:left-0 before:top-0 before:-z-10 before:h-full before:w-full before:origin-top-left before:scale-x-0 before:bg-black before:transition-transform before:duration-300 before:content-[''] hover:text-white before:hover:scale-x-100"
               >
                 Hire Us

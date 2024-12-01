@@ -6,21 +6,21 @@ import { Link } from "gatsby";
 
 const Hero = () => {
   return (
-    <section className="bg-light-yellow px-[6.25rem] pt-72 pb-4 flex flex-row align-top justify-between gap-10">
+    <section className="bg-white mx-auto max-w-7xl flex flex-row flex-grow items-center pt-40 lg:pt-72 pb-4 w-full sm:max-[1300px]:px-10 max-sm:px-6 align-top justify-between gap-10">
       <div>
         <div className="relative">
           <img
             src={HeroVector}
             alt="hero vector"
-            className="absolute top-[-16%] left-[-5%]"
+            className="absolute lg:top-[-40%] lg:left-[-5%] md:top-[-28%] md:left-[-5%] top-[-18%] left-[-10%] max-sm:size-12"
           />
-          <h1 className="font-heavy text-black text-[4rem]">
+          <h1 className="font-heavy text-black sm:text-[4rem] text-6xl max-sm:text-4xl">
             Designing Tomorrow <br></br>Your{" "}
             <span className="text-orange">Ideas,</span> Our
             <span className="text-green"> Expertise</span>
           </h1>
         </div>
-        <p className="font-regular text-2xl text-gray">
+        <p className="font-regular text-2xl max-sm:text-lg text-gray mt-2">
           Try a full-service digital agency, specializing in design, development
           and brand strategy to find customers and drive revenue.
         </p>
@@ -32,7 +32,11 @@ const Hero = () => {
           <IoArrowForwardOutline className="rotate-45 group-hover:rotate-0 transition-all ease-in-out" />
         </Link>
       </div>
-      <img src={HeroImage} alt="hero image" className="w-auto h-96" />
+      <img
+        src={HeroImage}
+        alt="hero image"
+        className="w-auto h-96 xl:flex hidden"
+      />
     </section>
   );
 };
