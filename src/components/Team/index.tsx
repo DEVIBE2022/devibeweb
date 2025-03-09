@@ -90,24 +90,6 @@ export default function Team() {
             title="Co-Founder"
             description="Considering all possible solutions."
           />
-          <Container
-            image={person2}
-            linkedIn="https://www.linkedin.com/in/muktiray123/"
-            twitter="https://twitter.com/RayMukti1"
-            dribbble="https://dribbble.com/"
-            name="Mukti Ray"
-            title="Design Lead"
-            description="I make products awesome."
-          />{" "}
-          <Container
-            image={person3}
-            linkedIn="https://www.linkedin.com/in/aditya-prasad-mohanty/"
-            twitter="https://twitter.com/adityaprasad150"
-            dribbble="https://dribbble.com/Aditya-150"
-            name="Aditya Prasad Mohanty"
-            title="Product Developer"
-            description="Building Solutions."
-          />
         </div>
       </div>
     </section>
